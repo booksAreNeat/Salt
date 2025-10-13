@@ -138,31 +138,27 @@ let atRestColour = "#000000ff";
 function setupCanvas(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    iWidthHeight = canvas.width * 0.1;
-    iSpaceing = 10;
-    //(canvas.width - (instrumentBlockWidthHeight * noOfinstrumentsInRow)) / (noOfinstrumentsInRow + 1);
-    // velocity =canvas.width * 0.01;
 
-    // pepperX = (canvas.width - pepperWidthAndHeight) / 2;
-    // pepperY = (canvas.height - pepperWidthAndHeight) / 2;
-
+    const widthHeightMin = Math.min(canvas.height, canvas.width);
+    iWidthHeight = widthHeightMin *0.1;
 }
 setupCanvas();
 
 
 //alows the canvas to scale with window size.
-window.addEventListener("resize", setupCanvas);
+window.addEventListener('resize', setupCanvas);
 
 
 //ensures that i havent just made ms paint by refreshing the 'background'
 function clearScreen(){
     ctx.fillStyle = iBackgroundColour;
-    ctx.fillRect(1, 1, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 
 //used canvas draw to show the pepper pilot instrument pannel on the canvas
 function drawPeppersInstrumentPanel(){
+    iSpaceing = iWidthHeight*0.45;
 
     ctx.save();
 
@@ -174,193 +170,193 @@ function drawPeppersInstrumentPanel(){
     ctx.fillText("Pepper Pilot Instrument Panel",  canvas.width/2, 30);
 
     //pepper is awake instrument light
-    ctx.fillStyle = customButtonAColour;
-    ctx.fillRect(100, 100, iWidthHeight, iWidthHeight);
+    ctx.fillStyle = customButtonXColour;
+    ctx.fillRect(iSpaceing, iSpaceing, iWidthHeight, iWidthHeight);
     ctx.fillStyle = "#000000ff";
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("custom A", 100 +iWidthHeight /2, 100+iWidthHeight /2);
+    ctx.fillText("custom X", iSpaceing +iWidthHeight /2, iSpaceing+iWidthHeight /2);
 
     //pepper is at rest instrument light
-    ctx.fillStyle = customButtonBColour;
-    ctx.fillRect(200+iWidthHeight, 100, iWidthHeight, iWidthHeight);
+    ctx.fillStyle = customButtonYColour;
+    ctx.fillRect(2*iSpaceing+iWidthHeight, iSpaceing, iWidthHeight, iWidthHeight);
     ctx.fillStyle = "#000000ff";
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("custom B", 200 + iWidthHeight*1.5, 100+iWidthHeight/2);
+    ctx.fillText("custom Y", 2*iSpaceing+ iWidthHeight*1.5, iSpaceing+iWidthHeight/2);
 
     //translation instuments =
     //translareforward
     ctx.fillStyle = translateForwardColour;
-    ctx.fillRect(300+ iWidthHeight*2, 200 + iWidthHeight, iWidthHeight, iWidthHeight);
+    ctx.fillRect(3*iSpaceing+ iWidthHeight*2, 2*iSpaceing+ iWidthHeight, iWidthHeight, iWidthHeight);
     ctx.fillStyle = "#000000ff";
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Translating foreward", 300 + iWidthHeight*2.5, 200+iWidthHeight*1.5);
+    ctx.fillText("Translating foreward", 3*iSpaceing + iWidthHeight*2.5, 2*iSpaceing+iWidthHeight*1.5);
 
     //rotatate right
     ctx.fillStyle = rotateRightColour;
-    ctx.fillRect(400+ iWidthHeight*3, 200 + iWidthHeight, iWidthHeight, iWidthHeight);
+    ctx.fillRect(4*iSpaceing+ iWidthHeight*3, 2*iSpaceing + iWidthHeight, iWidthHeight, iWidthHeight);
     ctx.fillStyle = "#000000ff";
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("rotating Right", 400 + iWidthHeight*3.5, 200+iWidthHeight*1.5);
+    ctx.fillText("rotating Right", 4*iSpaceing + iWidthHeight*3.5, 2*iSpaceing+iWidthHeight*1.5);
 
     //not translating
     ctx.fillStyle = notTranslatingColour;
-    ctx.fillRect(300+ iWidthHeight*2, 300 + iWidthHeight*2, iWidthHeight, iWidthHeight);
+    ctx.fillRect(3*iSpaceing+ iWidthHeight*2, 3*iSpaceing + iWidthHeight*2, iWidthHeight, iWidthHeight);
     ctx.fillStyle = "#000000ff";
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("pepper is stationary", 300 + iWidthHeight*2.5, 300+iWidthHeight*2.5);
+    ctx.fillText("pepper is stationary", 3*iSpaceing + iWidthHeight*2.5, 3*iSpaceing+iWidthHeight*2.5);
 
     //rotatinfg left
     ctx.fillStyle = rotateLeftColour;
-    ctx.fillRect(200+iWidthHeight, 200+iWidthHeight, iWidthHeight, iWidthHeight);
+    ctx.fillRect(2*iSpaceing+iWidthHeight, 2*iSpaceing+iWidthHeight, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Rotating Left", 200+iWidthHeight*1.5, 200+iWidthHeight*1.5);
+    ctx.fillText("Rotating Left", 2*iSpaceing+iWidthHeight*1.5, 2*iSpaceing+iWidthHeight*1.5);
 
     //translartingbackwards
     ctx.fillStyle = translateLeftColour;
-    ctx.fillRect(200+ iWidthHeight, 300+iWidthHeight*2, iWidthHeight, iWidthHeight)
+    ctx.fillRect(2*iSpaceing+ iWidthHeight, 3*iSpaceing+iWidthHeight*2, iWidthHeight, iWidthHeight)
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Translating Left", 200+iWidthHeight*1.5, 300+iWidthHeight*2.5);
+    ctx.fillText("Translating Left", 2*iSpaceing+iWidthHeight*1.5, 3*iSpaceing+iWidthHeight*2.5);
     
     //translating right
     ctx.fillStyle = translateRightColour;
-    ctx.fillRect(400+iWidthHeight*3, 300+iWidthHeight*2, iWidthHeight, iWidthHeight)
+    ctx.fillRect(4*iSpaceing+iWidthHeight*3, 3*iSpaceing+iWidthHeight*2, iWidthHeight, iWidthHeight)
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Translating Right", 400+iWidthHeight*3.5, 300+iWidthHeight*2.5);
+    ctx.fillText("Translating Right", 4*iSpaceing+iWidthHeight*3.5, 3*iSpaceing+iWidthHeight*2.5);
 
     //translating backward
     ctx.fillStyle = translateBackwardColour;
-    ctx.fillRect(300+iWidthHeight*2, 400+iWidthHeight*3, iWidthHeight, iWidthHeight)
+    ctx.fillRect(3*iSpaceing+iWidthHeight*2, 4*iSpaceing+iWidthHeight*3, iWidthHeight, iWidthHeight)
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Translating backward", 300+iWidthHeight*2.5, 400+iWidthHeight*3.5);
+    ctx.fillText("Translating backward", 3*iSpaceing+iWidthHeight*2.5, 4*iSpaceing+iWidthHeight*3.5);
 
 
     //pepper grip 
     ctx.fillStyle = leftGripColour;
-    ctx.fillRect(100, 200+iWidthHeight, iWidthHeight, iWidthHeight);
+    ctx.fillRect(iSpaceing, 2*iSpaceing+iWidthHeight, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Left Hand Gripping", 100+iWidthHeight*0.5, 200+iWidthHeight*1.5);
+    ctx.fillText("Left Hand Gripping", iSpaceing+iWidthHeight*0.5, 2*iSpaceing+iWidthHeight*1.5);
 
     ctx.fillStyle = rightGripColour;
-    ctx.fillRect(500+iWidthHeight*4 ,200+iWidthHeight, iWidthHeight, iWidthHeight);
+    ctx.fillRect(5*iSpaceing+iWidthHeight*4 ,2*iSpaceing+iWidthHeight, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Right Hand Gripping", 500+iWidthHeight*4.5, 200+iWidthHeight*1.5);
+    ctx.fillText("Right Hand Gripping", 5*iSpaceing+iWidthHeight*4.5, 2*iSpaceing+iWidthHeight*1.5);
 
     //emergency stop
     ctx.fillStyle = emergencyStopColour;
-    ctx.fillRect(300+iWidthHeight*2, 100, iWidthHeight, iWidthHeight);
+    ctx.fillRect(3*iSpaceing+iWidthHeight*2, iSpaceing, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("EMERGENCY STOP", 300+iWidthHeight*2.5, 100+iWidthHeight*0.5);
+    ctx.fillText("EMERGENCY STOP", 3*iSpaceing+iWidthHeight*2.5, iSpaceing+iWidthHeight*0.5);
 
     //custom button x
-    ctx.fillStyle = customButtonXColour;
-    ctx.fillRect(400+iWidthHeight*3, 100, iWidthHeight, iWidthHeight);
+    ctx.fillStyle = customButtonAColour;
+    ctx.fillRect(4*iSpaceing+iWidthHeight*3, iSpaceing, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Custom X", 400+iWidthHeight*3.5, 100+iWidthHeight*0.5);
+    ctx.fillText("Custom A", 4*iSpaceing+iWidthHeight*3.5, iSpaceing+iWidthHeight*0.5);
 
     //custom button y
-    ctx.fillStyle = customButtonYColour;
-    ctx.fillRect(500+iWidthHeight*4, 100, iWidthHeight, iWidthHeight);
+    ctx.fillStyle = customButtonBColour;
+    ctx.fillRect(5*iSpaceing+iWidthHeight*4, iSpaceing, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Custom Y", 500+iWidthHeight*4.5, 100+iWidthHeight*0.5);
+    ctx.fillText("Custom B", 5*iSpaceing+iWidthHeight*4.5, iSpaceing+iWidthHeight*0.5);
 
     //wave left
     ctx.fillStyle = pepperWaveLColour;
-    ctx.fillRect(100, 500+iWidthHeight*4, iWidthHeight, iWidthHeight);
+    ctx.fillRect(iSpaceing, 5*iSpaceing+iWidthHeight*4, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Wave left", 100+iWidthHeight/2, 500+iWidthHeight*4.5);
+    ctx.fillText("Wave left", iSpaceing+iWidthHeight/2, 5*iSpaceing+iWidthHeight*4.5);
 
     //pepper hands up 
     ctx.fillStyle = pepperHandsUpColour;
-    ctx.fillRect(200+iWidthHeight, 500+iWidthHeight*4, iWidthHeight, iWidthHeight);
+    ctx.fillRect(2*iSpaceing+iWidthHeight, 5*iSpaceing+iWidthHeight*4, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Hands up", 200+iWidthHeight*1.5, 500+iWidthHeight*4.5);
+    ctx.fillText("Hands up", 2*iSpaceing+iWidthHeight*1.5, 5*iSpaceing+iWidthHeight*4.5);
 
     //pepper salute
-    ctx.fillStyle= pepperSaluteColour; 
-    ctx.fillRect(400+iWidthHeight*3, 500+iWidthHeight*4, iWidthHeight, iWidthHeight);
+    ctx.fillStyle= pepperHandshakeColour; 
+    ctx.fillRect(4*iSpaceing+iWidthHeight*3, 5*iSpaceing+iWidthHeight*4, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("salute", 400+iWidthHeight*3.5, 500+iWidthHeight*4.5);
+    ctx.fillText("Handshake", 4*iSpaceing+iWidthHeight*3.5, 5*iSpaceing+iWidthHeight*4.5);
 
     //pepper handshake
-    ctx.fillStyle = pepperHandshakeColour;
-    ctx.fillRect(500+iWidthHeight*4, 500+iWidthHeight*4, iWidthHeight, iWidthHeight);
+    ctx.fillStyle = pepperSaluteColour;
+    ctx.fillRect(5*iSpaceing+iWidthHeight*4, 5*iSpaceing+iWidthHeight*4, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font ="26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("Handshake", 500+iWidthHeight*4.5, 500+iWidthHeight*4.5);
+    ctx.fillText("Salute", 5*iSpaceing+iWidthHeight*4.5, 5*iSpaceing+iWidthHeight*4.5);
 
     //pepper is awake
     ctx.fillStyle = isAwakeColour;
-    ctx.fillRect(100, 400+iWidthHeight*3, iWidthHeight, iWidthHeight);
+    ctx.fillRect(iSpaceing, 4*iSpaceing+iWidthHeight*3, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("pepper is awake", 100+iWidthHeight/2, 400+iWidthHeight*3.5);
+    ctx.fillText("pepper is awake", iSpaceing+iWidthHeight/2, 4*iSpaceing+iWidthHeight*3.5);
 
     //pepper is at rest
     ctx.fillStyle = atRestColour;
-    ctx.fillRect(500+iWidthHeight*4, 400+iWidthHeight*3, iWidthHeight, iWidthHeight);
+    ctx.fillRect(5*iSpaceing+iWidthHeight*4, 4*iSpaceing+iWidthHeight*3, iWidthHeight, iWidthHeight);
     ctx.fillStyle = iTextColour;
     ctx.font = "26px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("pepper is at rest", 500+iWidthHeight*4.5, 400+iWidthHeight*3.5);
+    ctx.fillText("pepper is at rest", 5*iSpaceing+iWidthHeight*4.5, 4*iSpaceing+iWidthHeight*3.5);
 
     ctx.restore();
 }
 
 function drawPepperHeadYaw(){
     ctx.save();
-    headYawX = 600+iWidthHeight*6;
-    headYawY = 400+iWidthHeight*4;
+    headYawX = 6*iSpaceing+iWidthHeight*6;
+    headYawY = 4*iSpaceing+iWidthHeight*4;
     ctx.translate(headYawX, headYawY);
     ctx.rotate(headYawAngle);
 
@@ -383,8 +379,8 @@ function drawPepperHeadYaw(){
 
 function drawPepperHeadPitch(){
     ctx.save();
-    headPitchX = 600+iWidthHeight*6.5;
-    headPitchY = 300+iWidthHeight*2;
+    headPitchX = 6*iSpaceing+iWidthHeight*6.5;
+    headPitchY = 3*iSpaceing+iWidthHeight*2;
     ctx.translate(headPitchX, headPitchY);
     ctx.rotate(headPitchAngle);
 
@@ -512,6 +508,7 @@ function light(lightbool, lightColour, iUnlitColour){
     return lightbool ? lightColour : iUnlitColour;
 }
 
+
 //linking buttons to pepper - if its apocolypticly ugly but it works then leave me alone 
 //using the left stick to translate pepper across the ground
 function pepperGroundTranslation(){
@@ -556,6 +553,8 @@ function pepperGroundTranslation(){
     notTranslatingColour = light(pepperNotTranslating, iLitColour, iUnlitColour);
 }
 
+
+//used the bumpers to rotate pepper
 function pepperRotates(){
     if(leftBumperPressed){
         //nao.motion.move(0.0, 0.0, vspeed);
@@ -776,11 +775,10 @@ function emergencyStopButton(){
         emergencyStop = false;
         console.log("emergency stop reset using left stick button")
     }
-    emergencyStopColour = light(emergencyStop, iLitColour, iUnlitColour);
+    emergencyStopColour = light(emergencyStop, iWarningLitColour, iWarningUnlitColour);
 }
 
-
-
+//Controls only work if the emergency stop hasnt been pressed
 function updatePepper(){
     if(!emergencyStop){
         pepperABXY();
@@ -790,9 +788,9 @@ function updatePepper(){
         pepperHeadMove();
         pepperDPad();
         pepperSquaresHamburgers();
-    }
-  
+    }  
 }
+
 
 function gameLoop(){
     clearScreen();
@@ -802,7 +800,6 @@ function gameLoop(){
     emergencyStopButton();
     gamepadInput();
     updatePepper();
-    //console.log(pepperRotateLeft)
     requestAnimationFrame(gameLoop);
 }
 
