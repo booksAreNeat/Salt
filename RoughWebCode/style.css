@@ -224,3 +224,17 @@ body {
     font-size: 16px;
     /* Font size for readability */
 }
+
+button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #afa0be;
+            color: #221A29;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+}
+
+button:hover {
+            background-color: white;
+}
