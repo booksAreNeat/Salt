@@ -395,19 +395,16 @@ button:hover {
     padding: 20px;
     margin: 30px;
     justify-self: center;
-    background-color: #221A29;
 }
 
-.tablet-controls-top {
-    width: 90%;
-    height: 50%;
-    justify-self: center;
-    background-color: aqua;
+.tablet-controls-row {
+    display: flex;
+    justify-content:center;
 }
 
-.tablet-controls-bottom {
-    width: 90%;
-    height: 50%;
-    justify-self: center;
-    background-color: chocolate;
+.tablet-controls-images {
+    width: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
 }
+
