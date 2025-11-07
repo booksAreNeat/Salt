@@ -35,7 +35,7 @@
                 <section class="introduction">
                     <h2>WELCOME TO THE PEPPER INTERFACE</h2>
                     <p>Welcome to the remote access  for Pepper the robot. This allows full control over all of Pepper's functions, including: Movement, Interactions, Speech & Dancing.<p>
-                    <p>To the left, you will find controls for movement and on the 'Advanced Control Panel' you will find more advanced code for dancing. Below is atext input field that will dictate what Pepper says, as well as updating the subtitles found on Peppers Tablet Interface.</p>
+                    <p>To the left, you will find controls for movement and on the 'Advanced Control Panel' you will find more advanced code for dancing. Below is a text input field that will dictate what Pepper says, as well as updating the subtitles found on Peppers Tablet Interface.</p>
                 </section>
                 <form>
                     <input type="text" id="speakText" name="speakText" placeholder="Enter text for Pepper to say">  
@@ -45,9 +45,20 @@
             <div class="column">
                 <section class = "introduction">
                     <h2>MOVEMENT CONTROLS</h2>
-                    <p>For basic control of Pepper's movement, use the control interface below. For more advamced controls, navigate to the control panel page.</p>
+                    <p>For basic control of Pepper's movement, use the control interface below. For more advanced controls, navigate to the control panel page.</p>
                     <section>
-                        <button id="crouch" onclick="nao.spin360();"> 360 SPIN </button>
+                        <button id="shutdown" onclick="nao.system.shutdown();"></button>
+                        <button id="reboot" onclick="nao.system.reboot();"></button>
+                        <button id="openhand" onclick="nao.motion.openHand('LHand');"></button>
+                        <button id="closehand" onclick="nao.motion.closeHand('LHand');"></button>
+                        <button id="righthandopen" onclick="nao.motion.openHand('RHand');"></button>
+                        <button id="righthandclose" onclick="nao.motion.closeHand('RHand');"></button>
+                        <button id="wave1" onclick="runBehaviour('dialog_move/animations/Others/Standing/Wave01');randomHello();"></button>
+                        <button id="wave1" onclick="runBehaviour('dialog_move_hands/animations/Wave01');randomHello();"></button>
+                        <button id="forward" onclick="nao.move('forward',speed);"></button>
+                        <button id="left" onclick="nao.move('left');"></button>
+                        <button id="backward" onclick="nao.move('backward');"></button>
+                        <button id="right" onclick="nao.move('right');"></button>
                     </section>
                     <button onclick="location.href='advanced-control-panel.html'">ADVANCED CONTROL PANEL</button>
                 </section>
