@@ -406,3 +406,51 @@ button:hover {
     margin-right: 8%;
 }
 
+/* Tablet Carousel */
+
+.tablet-carousel {
+    height: 55vh;
+    margin-top: 30px;
+}
+
+.tablet-carousel-container {
+    width: 80%;
+    height: 55vh;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color:   rgb(211,211,211);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 30px;
+    justify-self: center;
+}
+
+.tablet-carousel-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.tablet-carousel-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.tablet-left-arrow {
+    float: left;
+    bottom: 27%;
+    height: 10%;
+    margin-left: 3%;
+    position: absolute;
+    align-items: center;
+}
+
+.tablet-right-arrow {
+    bottom: 27%;
+    height: 10%;
+    margin-left: 92%;
+    position: absolute;
+    align-items: center;
+}
