@@ -30,6 +30,7 @@ body {
     text-align: center;
 }
 
+/*css for two column split*/
 .column {
   float: left;
   width: 50%;
