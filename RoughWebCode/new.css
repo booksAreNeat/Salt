@@ -30,62 +30,16 @@ body {
     text-align: center;
 }
 
-
-
-
-
-/* Navigation Bar Styling */
-.navbar {
-    width: 100%;
-    margin: auto;
-    padding: 5px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.column {
+  float: left;
+  width: 50%;
 }
 
-.navbar .logo {
-    height: 50px;
-    margin-left: 20px;
-    padding: 5px;
-    border-radius: 15px;
-}
-
-.navbar ul {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-
-/* Navigation Links Styling */
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: rgb(175 160 190);
-    text-transform: uppercase;
-    padding-bottom: 25px;
-}
-
-/* Navigation Link Hover Effect */
-.navbar ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: rgb(242, 240,244);
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 100%;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Content Styling */
