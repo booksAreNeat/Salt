@@ -61,17 +61,32 @@
     <div class="tablet-controls-container">
 
        <div class="tablet-controls-row">
-
-            <img src="Images/buttonimg/dancebutton.png" class="tablet-controls-images">
-            <img src="Images/buttonimg/wavebutton.png" class="tablet-controls-images">
-            <img src="Images/buttonimg/surprisemebutton.png" class="tablet-controls-images">
+            <div class = "tablet-controls-item">
+                <img src="Images/buttonimg/dancebutton.png" class="tablet-controls-images">
+                <button class = "tablet-controls-button" onclick = "runBehaviour('animations/Stand/Dance/DanceMoves');"></button>
+            </div>
+            <div class = "tablet-controls-item">
+              <img src="Images/buttonimg/wavebutton.png" class="tablet-controls-images">  
+              <button class = "tablet-controls-button" onclick = "runBehaviour('dialog_move/animations/Others/Standing/Wave01'); randomHello();"></button>
+            </div>
+            <div class = "tablet-controls-item">
+              <img src="Images/buttonimg/surprisemebutton.png" class="tablet-controls-images">  
+              <button class = "tablet-controls-button" onclick="startRandomBehaviour();"></button>
+            </div>
+            
 
        </div>
 
        <div class="tablet-controls-row">
-
-            <img src="Images/buttonimg/salutebutton.png" class="tablet-controls-images">
-            <img src="Images/buttonimg/highfivebutton.png" class="tablet-controls-images">
+            <div class = "tablet-controls-item">
+               <img src="Images/buttonimg/salutebutton.png" class="tablet-controls-images"> 
+               <button class = "tablet-controls-button" onclick="runBehaviour('animations/Stand/Gestures/Salute_1');"></button>
+            </div>
+            <div class = "tablet-controls-item">
+               <img src="Images/buttonimg/highfivebutton.png" class="tablet-controls-images"> 
+               <button class = "tablet-controls-button" onclick="runBehaviour('animations/Stand/Gestures/Hey_1');"></button>
+            </div>
+            
 
        </div>
 

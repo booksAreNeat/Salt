@@ -1,15 +1,14 @@
 /* Universal Styling */
-/* Background   rgb(211,211,211)*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensure padding and border are included in element's total width and height */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    background-color:   rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 /* Banner Styling */
@@ -21,32 +20,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* Banner Title Styling */
 .banner-title {
     color: white;
     font-size: 50px;
-    flex: 1;
     text-align: center;
 }
 
-/* Registration Banner Styling */
-.registration-banner {
-    padding: 50px;
-    width: 96.75%;
-    height: 10vh;
-    align-self: center;
-    margin-bottom: 5px;
-}
-
-/* Registration Banner Title Styling */
-.registration-banner-title {
-    color: white;
-    font-size: 50px;
-    flex: 1;
-    text-align: center;
-}
-
-/* Navigation Bar Styling */
+/*Navigation Bar*/
 .navbar {
     width: 100%;
     margin: auto;
@@ -54,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:   rgb(211,211,211);
+    background-color: rgb(211,211,211);
     border-radius: 15px;
     border: solid white;
 }
@@ -72,7 +52,6 @@ body {
     margin-left: auto;
 }
 
-/* Navigation Links Styling */
 .navbar ul li {
     list-style: none;
     display: inline-block;
@@ -82,17 +61,16 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     text-transform: uppercase;
     padding-bottom: 25px;
 }
 
-/* Navigation Link Hover Effect */
 .navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
-    background: #ffffff;
+    background: white;
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -103,25 +81,20 @@ body {
     width: 100%;
 }
 
-/* Content Styling */
+/* Content */
 .content {
     width: 100%;
     padding: 20px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: white;
     border-radius: 15px;
-    background-color:   rgb(211,211,211);
+    background-color: rgb(211,211,211);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 60px auto;
-    /* Increased margin to push content further down */
     border: solid white;
 }
 
-
-
-
-
-/* Carousel Styling */
+/* Carousel */
 .carousel {
     position: relative;
     height: 320px;
@@ -143,8 +116,6 @@ body {
 }
 
 .carousel__track {
-    padding: 0;
-    margin: 0;
     list-style: none;
     position: relative;
     height: 100%;
@@ -165,13 +136,8 @@ body {
     width: 20px;
 }
 
-.carousel__button--left {
-    left: -40px;
-}
-
-.carousel__button--right {
-    right: -40px;
-}
+.carousel__button--left { left: -40px; }
+.carousel__button--right { right: -40px; }
 
 .carousel__nav {
     display: flex;
@@ -192,106 +158,83 @@ body {
     background: grey;
 }
 
-
-/* Footer Styling */
+/* Footer */
 .footer {
-    background-color:   rgb(211,211,211);
-    /* Same background color as the rest of the site for consistency */
+    background-color: rgb(211,211,211);
     color: white;
     padding: 20px;
-    /* Top and bottom padding for spacing */
     text-align: center;
     border-top: 1px solid #ddd;
-    /* Light border for separation */
     position: relative;
-    /* Positioned relative to allow for absolute positioning of the button */
     bottom: 0;
     width: 100%;
 }
 
 .footer .container {
     max-width: 1000px;
-    /* Max width to align content */
     margin: 0 auto;
-    /* Center align container */
     padding: 0 20px;
-    /* Padding for inner spacing */
 }
 
 .footer p {
     margin: 0;
-    /* Remove default margin */
     font-size: 16px;
-    /* Font size for readability */
 }
 
+/* Buttons */
 button {
-            padding: 15px 30px;
-            font-size: 16px;
-            background-color: #afa0be;
-            color: #221A29;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #afa0be;
+    color: #221A29;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 button:hover {
-            background-color: white;
+    background-color: white;
 }
 
-
-
-
-/* Tablet designs */
+/* Tablet Designs */
 
 /* Tablet Banner Title Styling */
-.tablet-banner-title {
-    color: white;
-    font-size: 50px;
-    flex: 1;
-    text-align: left;
-    margin-top: 3%;
-}
-
-/* Banner Styling */
 .tablet-banner {
     padding: 8px;
     width: 100%;
     height: 25vh;
-    justify-self: center;
     background-color: #44364F;
     overflow: hidden;
 }
 
-.tablet-banner-left {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+.tablet-banner-title {
+    color: white;
+    font-size: 50px;
+    text-align: left;
+    margin-top: 3%;
+}
+
+.tablet-banner-left,
+.tablet-banner-right {
+    padding: 10px;
     margin: 10px;
-    margin-left: 4%;
-    width: 30%;
     height: fit-content;
+}
+
+.tablet-banner-left {
+    width: 30%;
     float: left;
+    margin-left: 4%;
 }
 
 .tablet-banner-right {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
     width: 58%;
-    height: fit-content;
     float: right;
 }
 
 .tablet-logo {
     width: 20%;
-    margin-left: 30%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    justify-self: center;
+    margin: 2% 0 2% 30%;
 }
 
 /* Tablet Navigation Bar Styling */
@@ -304,7 +247,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     background-color: #221A29;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .tablet-navbar ul {
@@ -312,64 +255,42 @@ button:hover {
     align-items: center;
     width: 35%;
 }
-
 /* Tablet Navigation Links Styling */
 .tablet-navbar ul li {
     list-style: none;
-    display: inline-block;
-    margin-left: 33%;
-    margin-right: 33%;
-    position: relative;
+    margin: 0 33%;
 }
 
 .tablet-navbar ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     text-transform: uppercase;
-    padding-bottom: 25px;
     font-size: 1.7em;
 }
 
 /* Tablet content */
-
 .tablet-content {
     width: 90%;
-    height: 45vh;
     padding: 20px;
     text-align: center;
-    color: rgb(255, 255, 255);
-    background-color:   rgb(211,211,211);
+    color: white;
+    background-color: rgb(211,211,211);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 60px;
+    margin: 60px auto;
 }
 
-.tablet-left-col {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+.tablet-left-col, .tablet-right-col {
+    padding: 10px;
     margin: 10px;
-    width: 35%;
-    height:fit-content;
-    float: left;
+    height: fit-content;
 }
 
-.tablet-right-col {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-    width: 55%;
-    height:fit-content;
-    float: right;
-}
+.tablet-left-col { width: 35%; float: left; }
+.tablet-right-col { width: 55%; float: right; }
 
 .tablet-image-shrink {
     width: 50%;
-    margin-left: 30%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 2% 0 2% 30%;
 }
 
 .tablet-about-title {
@@ -384,30 +305,56 @@ button:hover {
     margin-top: 5%;
 }
 
-
 /* Tablet Controls */
-
 .tablet-controls-container {
     width: 90%;
-    height: 55vh;
     padding: 20px;
-    margin: 30px;
-    justify-self: center;
+    margin: 30px auto;
+    text-align: center;
 }
 
 .tablet-controls-row {
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.tablet-controls-images {
-    width: 15%;
-    margin-left: 8%;
-    margin-right: 8%;
+/* Each control (image + overlay button) */
+.tablet-controls-item {
+    position: relative;
+    display: inline-block;
+    margin: 40px 100px;
+    width: 300px;
+    height: 300px;
+}
+
+.tablet-controls-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.tablet-controls-item img:hover {
+    transform: scale(1.05);
+}
+
+.tablet-controls-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
 }
 
 /* Tablet Carousel */
-
 .tablet-carousel {
     height: 55vh;
     margin-top: 30px;
@@ -418,39 +365,26 @@ button:hover {
     height: 55vh;
     padding: 20px;
     text-align: center;
-    color: rgb(255, 255, 255);
-    background-color:   rgb(211,211,211);
+    color: white;
+    background-color: rgb(211,211,211);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 30px;
+    margin: 30px 60px;
     justify-self: center;
 }
 
-.tablet-carousel-slide {
-    width: 100%;
-    height: 100%;
-}
-
+.tablet-carousel-slide,
 .tablet-carousel-image {
     width: 100%;
     height: 100%;
 }
 
-
-.tablet-left-arrow {
-    float: left;
-    bottom: 27%;
-    height: 10%;
-    margin-left: 3%;
-    position: absolute;
-    align-items: center;
-}
-
+.tablet-left-arrow,
 .tablet-right-arrow {
+    position: absolute;
     bottom: 27%;
     height: 10%;
-    margin-left: 92%;
-    position: absolute;
     align-items: center;
 }
+
+.tablet-left-arrow { left: 3%; }
+.tablet-right-arrow { right: 3%; }
