@@ -392,3 +392,8 @@ button:hover {
 
 .tablet-left-arrow { left: 3%; }
 .tablet-right-arrow { right: 3%; }
+
+.pepper-caption{
+    position: fixed;
+    text-align: center;
+}
