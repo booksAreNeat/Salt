@@ -329,8 +329,8 @@ button:hover {
 }
 
 .tablet-controls-item img {
-    width: 33%;
-    height: 33%;
+    width: 35%;
+    height: 35%;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s;
@@ -344,8 +344,8 @@ button:hover {
 .tablet-controls-button {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 25%;
+    width: 50%;
     height: 100%;
     opacity: 0;
     cursor: pointer;
