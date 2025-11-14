@@ -364,8 +364,6 @@ button:hover {
     padding: 20px;
     text-align: center;
     color: white;
-    background-color: rgb(211,211,211);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 30px 60px;
     justify-self: center;
 }
@@ -375,6 +373,7 @@ button:hover {
     height: 100%;
 }
 
+/* Keeping this seperate from the slide CSS because I might need to adjust the image size later */
 
 .tablet-carousel-image {
     width: 100%;
