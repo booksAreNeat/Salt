@@ -7,7 +7,7 @@
     <title>Pepper's Portal</title>
     <script src="js/jquery.min.js"></script>
     <script src="/libs/qi/2/qi.js"></script>
-    <script src="js/naocontrol.js"></script> 
+    <script src="js/naocontrol.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="new.css">
 </head>
@@ -32,72 +32,87 @@
 
 
         <!--Main content-->
-        <div class="row", id="content">
-            <div class="column">
+        <div class="row" , id="content">
+            <div class="column-right">
                 <section class="introduction">
                     <h2>WELCOME TO THE PEPPER INTERFACE</h2>
-                    <p>Welcome to the remote access  for Pepper the robot. This allows full control over all of Pepper's functions, including: Movement, Interactions, Speech & Dancing.<p>
-                    <p>To the left, you will find controls for movement and on the 'Advanced Control Panel' you will find more advanced code for dancing. Below is a text input field that will dictate what Pepper says, as well as updating the subtitles found on Peppers Tablet Interface.</p>
+                    <p>Welcome to the remote access for Pepper the robot. This allows full control over all of Pepper's
+                        functions, including: Movement, Interactions, Speech & Dancing.
+                    <p>
+                    <p>To the left, you will find controls for movement and on the 'Advanced Control Panel' you will
+                        find more advanced code for dancing. Below is a text input field that will dictate what Pepper
+                        says, as well as updating the subtitles found on Peppers Tablet Interface.</p>
                 </section>
                 <form>
-                    <input type="text" id="speakText" name="speakText" placeholder="Enter text for Pepper to say">  
-                    <button type="submit">SUBMIT</button>
+                    <input type="text" id="speakText" name="speakText" placeholder="Enter text for Pepper to say">
+                    <button class="form-button" type="submit">SUBMIT</button>
                 </form>
             </div>
-            <div class="column">
-                <section class = "introduction">
+            <div class="column-left">
+                <section class="introduction">
                     <h2>MOVEMENT CONTROLS</h2>
-                    <p>For basic control of Pepper's movement, use the control interface below. For more advanced controls, navigate to the control panel page.</p>
-                    <section>
-                        <button id="shutdown" onclick="nao.system.shutdown();">
-                            <div>shutdown</div>
-                        </button>
-                        <button id="reboot" onclick="nao.system.reboot();">
-                            <div>reboot</div>
-                        </button>
-                        <button id="openhand" onclick="nao.motion.openHand('LHand');">
-                            <div>open hand</div>
-                        </button>
-                        <button id="closehand" onclick="nao.motion.closeHand('LHand');">
-                            <div>close hand</div>
-                        </button>
-                        <button id="righthandopen" onclick="nao.motion.openHand('RHand');">
-                            <div>open hand</div>
-                        </button>
-                        <button id="righthandclose" onclick="nao.motion.closeHand('RHand');">
-                            <div>close hand</div>
-                        </button>
-                        <button id="wave1" onclick="runBehaviour('dialog_move/animations/Others/Standing/Wave01');randomHello();">
-                            <div>wave</div>
-                        </button>
-                        <button id="wave1" onclick="runBehaviour('dialog_move_hands/animations/Wave01');randomHello();">
-                            <div>wave</div>
-                        </button>
-                        <button id="forward" onclick="nao.move('forward',speed);">
-                            <div>forward</div>
-                        </button>
-                        <button id="left" onclick="nao.move('left');">
-                            <div>left</div>
-                        </button>
-                        <button id="backward" onclick="nao.move('backward');">
-                            <div>backward</div>
-                        </button>
-                        <button id="right" onclick="nao.move('right');">
-                            <div>right</div>
-                        </button>
+                    <p>For basic control of Pepper's movement, use the control interface below. For more advanced
+                        controls, navigate to the control panel page.</p>
+                    <section class="controller">
+
+                        <!-- TOP ROW -->
+                        <div class="top-row">
+                            <button class="dark" id="sleep" onclick="nao.system.sleep();">sleep</button>
+                            <button class="dark" id="shutdown" onclick="nao.system.shutdown();">shutdown</button>
+                            <button class="dark" id="reboot" onclick="nao.system.reboot();">reboot</button>
+                            <button class="dark" id="wakeup" onclick="nao.system.wakeup();">wake up</button>
+                        </div>
+
+                        <div class="middle-row">
+
+                            <!-- LEFT HAND BUTTONS -->
+                            <div class="hand-left">
+                                <button class="light" onclick="nao.motion.openHand('LHand');">open left hand</button>
+                                <button class="light" onclick="nao.motion.closeHand('LHand');">close left hand</button>
+                            </div>
+
+                            <!-- D-PAD -->
+                            <div class="dpad-container">
+                                <div class="dpad">
+                                    <button class="light arrow" id="forward"
+                                        onclick="nao.move('forward', speed);">▲</button>
+
+                                    <div class="middle-arrows">
+                                        <button class="light arrow" id="left" onclick="nao.move('left');">◀</button>
+                                        <button class="light arrow" id="right" onclick="nao.move('right');">▶</button>
+                                    </div>
+
+                                    <button class="light arrow" id="backward" onclick="nao.move('backward');">▼</button>
+
+
+                                    <div class="dpad-waves">
+                                        <button class="dark circle"
+                                            onclick="runBehaviour('dialog_move/animations/Others/Standing/Wave01');randomHello();">wave</button>
+                                        <button class="dark circle"
+                                            onclick="runBehaviour('dialog_move_hands/animations/Wave01');randomHello();">wave</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT HAND BUTTONS -->
+                            <div class="hand-right">
+                                <button class="light" onclick="nao.motion.openHand('RHand');">open right hand</button>
+                                <button class="light" onclick="nao.motion.closeHand('RHand');">close right hand</button>
+                            </div>
+
+
+
+                        </div>
+
                     </section>
                     <button onclick="location.href='advanced-control-panel.html'">ADVANCED CONTROL PANEL</button>
                 </section>
             </div>
         </div>
     </div>
+   
 </body>
 
-<!--Footer-->
-<footer class="footer">
-    <div class="container">
-        <p>Pepper's Portal (Hypothetical) rights reserved</p>
-    </div>
-</footer>
+
 
 </html>

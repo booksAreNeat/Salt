@@ -1,6 +1,6 @@
 /* Universal Styling */
 /* Background 	rgb(211,211,211)*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,15 +9,14 @@
 }
 
 body {
-    background-color: 	rgb(242, 240,244);
+    background-color: rgb(242, 240, 244);
 }
 
 /* Banner Styling */
 .banner {
     background-color: rgb(68 54 79);
-    padding: 5px;
     width: 100%;
-    height: 10vh;
+    height: 13vh;
     justify-self: center;
     margin-bottom: 10px;
 }
@@ -28,19 +27,31 @@ body {
     font-size: 50px;
     flex: 1;
     text-align: center;
+   
 }
 
 /*css for two column split*/
 .column {
-  float: left;
-  width: 50%;
+    float: left;
+    width: 50%;
 }
+.form-button{
+     background: rgb(34 26 41);
+    color: rgb(175 160 190);
+
+}
+
+.form-button:hover {
+        background: rgb(175 160 190);
+        color: rgb(34 26 41);
+    }
+
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Content Styling */
@@ -49,155 +60,148 @@ body {
     padding: 20px;
     text-align: center;
     color: rgb(34 26 41);
-    background-color:rgb(175 160 190);
+    background-color: rgb(175 160 190);
     margin: 60px auto;
     /* Increased margin to push content further down */
 }
 
 /* Control panle content */
 .control-panel-content {
-     width: 100%;
+    width: 100%;
     padding: 20px;
     text-align: center;
     color: rgb(34 26 41);
-    background-color:rgb(175 160 190);
+    background-color: rgb(175 160 190);
     margin: 60px auto;
     /* Increased margin to push content further down */
 }
 
 /* About page styling*/
 .about-content {
-     width: 100%;
+    width: 100%;
     padding: 20px;
     text-align: center;
     color: rgb(34 26 41);
-    background-color:rgb(175 160 190);
+    background-color: rgb(175 160 190);
     margin: 60px auto;
     /* Increased margin to push content further down */
 }
 
 /* contact us styling*/
 .contact-us-content {
-     width: 100%;
+    width: 100%;
     padding: 20px;
     text-align: center;
     color: rgb(34 26 41);
-    background-color:rgb(175 160 190);
+    background-color: rgb(175 160 190);
     margin: 60px auto;
     /* Increased margin to push content further down */
 }
 
-
-
-
-/* Carousel Styling */
-.carousel {
-    position: relative;
-    height: 320px;
-    width: 40%;
+.controller {
+    width: 650px;
     margin: 40px auto;
+    padding: 25px;
+    background: rgb(68 54 79);
+    border-radius: 20px;
 }
 
-.carousel__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+button {
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 7px;
+    text-transform: uppercase;
 }
 
-.carousel__track-container {
-    background: rgb(175 160 190);
-     height: 98.4%;
-    position: relative;
-    overflow: hidden;
-}
+/* COLORS */
+.dark {
+    background: rgb(34 26 41);
+    color: rgb(175 160 190);
+    }
 
-.carousel__track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in;
-}
+    .light {
+        background: rgb(142 120 161);
+        color: rgb(34 26 41);
+    }
 
-.carousel__slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
+    .dark:hover {
+        background: rgb(175 160 190);
+        color: rgb(34 26 41);
+    }
 
-.carousel__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-}
+    .light:hover {
+        background: rgb(34 26 41);
+        color: rgb(142 120 161);
+    }
 
-.carousel__button--left {
-    left: -40px;
-}
 
-.carousel__button--right {
-    right: -40px;
-}
+    /* TOP BUTTON ROW */
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
 
-.carousel__nav {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
+    /* MIDDLE 4-COLUMN LAYOUT */
+    .middle-row {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+    }
 
-.carousel__indicator {
-    border: 0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: 221A29;
-    margin: 0 12px;
-}
+    /* HAND BUTTON COLUMNS */
+    .hand-left,
+    .hand-right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-right: 5px;
+    }
 
-.carousel__indicator.current-slide {
-    background: rgb(242 240 244);
-}
+    /* WAVE COLUMN */
+    .wave-col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
 
-/* Introduction Section Styling */
-.introduction {
-    margin: 20px auto;
-}
+    .dpad-containter{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
-.introduction h2 {
-    font-size: 32px;
-}
+    .dpad {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    
+    }
 
-/* Footer Styling */
-.footer {
-    background-color: rgb(175 160 190);
-    /* Same background color as the rest of the site for consistency */
-    color: rgb(34 26 41);
-    padding: 20px;
-    /* Top and bottom padding for spacing */
-    text-align: center;
-    border-top: 1px solid #ddd;
-    /* Light border for separation */
-    position: relative;
-    /* Positioned relative to allow for absolute positioning of the button */
-    bottom: 0;
-    width: 100%;
-}
+    .middle-arrows {
+        display: flex;
+        gap: 14px;
+    }
 
-.footer .container {
-    max-width: 1000px;
-    /* Max width to align content */
-    margin: 0 auto;
-    /* Center align container */
-    padding: 0 20px;
-    /* Padding for inner spacing */
-}
+    .dpad-waves {
+        display: flex;
+        flex-direction: row;
+        gap: 14px;
+        margin-top: 10px;
 
-.footer p {
-    margin: 0;
-    /* Remove default margin */
-    font-size: 16px;
-    /* Font size for readability */
-}
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+   
