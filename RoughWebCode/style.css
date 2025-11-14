@@ -381,16 +381,22 @@ button:hover {
     height: 100%;
 }
 
-.tablet-left-arrow,
-.tablet-right-arrow {
+.tablet-left-arrow {
+    left: 8%; 
     position: absolute;
     bottom: 27%;
     height: 10%;
     align-items: center;
 }
 
-.tablet-left-arrow { left: 3%; }
-.tablet-right-arrow { right: 3%; }
+
+.tablet-right-arrow {
+    right: 8%;
+    position: absolute;
+    bottom: 27%;
+    height: 10%;
+    align-items: center;
+}
 
 .pepper-caption{
     position: fixed;
