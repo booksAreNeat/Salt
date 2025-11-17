@@ -211,7 +211,7 @@ button:hover {
     color: white;
     font-size: 50px;
     text-align: left;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 .tablet-banner-left,
@@ -228,7 +228,7 @@ button:hover {
 }
 
 .tablet-banner-right {
-    width: 58%;
+    width: 55%;
     float: right;
 }
 
