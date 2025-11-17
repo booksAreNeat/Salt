@@ -1,0 +1,1 @@
+ rsync -avzh SALT nao@pepper.local:/home/nao/.local/share/PackageManager/apps/robot-page/html/SALT

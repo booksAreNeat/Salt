@@ -1,0 +1,399 @@
+/* Universal Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Banner Styling */
+.banner {
+    padding: 5px;
+    width: 96.75%;
+    height: 10vh;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+
+.banner-title {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+/*Navigation Bar*/
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(211,211,211);
+    border-radius: 15px;
+    border: solid white;
+}
+
+.navbar .logo {
+    height: 50px;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    background-color: rgb(211,211,211);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+    border: solid white;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    height: 320px;
+    width: 40%;
+    margin: 40px auto;
+}
+
+.carousel__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__track-container {
+    background: white;
+    height: 98.4%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+}
+
+.carousel__button--left { left: -40px; }
+.carousel__button--right { right: -40px; }
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: white;
+    margin: 0 12px;
+}
+
+.carousel__indicator.current-slide {
+    background: grey;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(211,211,211);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #afa0be;
+    color: #221A29;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+/* Tablet Designs */
+
+/* Tablet Banner Title Styling */
+.tablet-banner {
+    padding: 8px;
+    width: 100%;
+    height: 25vh;
+    background-color: #44364F;
+    overflow: hidden;
+}
+
+.tablet-banner-title {
+    color: white;
+    font-size: 50px;
+    text-align: left;
+    margin-top: 3%;
+}
+
+.tablet-banner-left,
+.tablet-banner-right {
+    padding: 10px;
+    margin: 10px;
+    height: fit-content;
+}
+
+.tablet-banner-left {
+    width: 30%;
+    float: left;
+    margin-left: 4%;
+}
+
+.tablet-banner-right {
+    width: 58%;
+    float: right;
+}
+
+.tablet-logo {
+    width: 20%;
+    margin: 2% 0 2% 30%;
+}
+
+/* Tablet Navigation Bar Styling */
+.tablet-navbar {
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #221A29;
+    overflow: hidden;
+}
+
+.tablet-navbar ul {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+/* Tablet Navigation Links Styling */
+.tablet-navbar ul li {
+    list-style: none;
+    margin: 0 33%;
+}
+
+.tablet-navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+/* Tablet content */
+.tablet-content {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(211,211,211);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+}
+
+.tablet-left-col, .tablet-right-col {
+    padding: 10px;
+    margin: 10px;
+    height: fit-content;
+}
+
+.tablet-left-col { width: 35%; float: left; }
+.tablet-right-col { width: 55%; float: right; }
+
+.tablet-image-shrink {
+    width: 50%;
+    margin: 2% 0 2% 30%;
+}
+
+.tablet-about-title {
+    color: #221A29;
+    font-size: 1.7em;
+}
+
+.tablet-about-text {
+    color: #221A29;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/* Tablet Controls */
+.tablet-controls-container {
+    width: 90%;
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.tablet-controls-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Each control (image + overlay button) */
+.tablet-controls-item {
+    position: relative;
+    display: inline-block;
+    margin: 40px 100px;
+    width: 300px;
+    height: 300px;
+}
+
+.tablet-controls-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.tablet-controls-item img:hover {
+    transform: scale(1.05);
+}
+
+.tablet-controls-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+/* Tablet Carousel */
+.tablet-carousel {
+    height: 55vh;
+    margin-top: 30px;
+}
+
+.tablet-carousel-container {
+    height: 55vh;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(211,211,211);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 60px;
+    justify-self: center;
+}
+
+.tablet-carousel-slide {
+    width: 100%;
+    height: 100%;
+}
+
+
+.tablet-carousel-image {
+    width: 100%;
+    height: 100%;
+}
+
+.tablet-left-arrow,
+.tablet-right-arrow {
+    position: absolute;
+    bottom: 27%;
+    height: 10%;
+    align-items: center;
+}
+
+.tablet-left-arrow { left: 3%; }
+.tablet-right-arrow { right: 3%; }
+
+.pepper-caption{
+    position: fixed;
+    text-align: center;
+}
