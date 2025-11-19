@@ -9,7 +9,8 @@
     <script src="/libs/qi/2/qi.js"></script>
     <script src="js/naocontrol.js"></script>
     <script src="js/main.js"></script>
-    <link rel="stylesheet" href="styles/new.css">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="new.css">
 </head>
 
 <body>
@@ -29,106 +30,108 @@
             <h1 class="banner-title">Pepper</h1>
 
         </div>
+    </div>
 
-
+    <div class=body>
         <!--Main content-->
         <div class="content">
 
-            <section class="introduction">
-                <!--Body Buttons-->
-                <button id="crouch" onclick="nao.spin360();">
-                    <div>360<div>
-                </button>
-                <button id="stand "onclick="nao.spin180();">
-                    <div>180</div>
-                </button>
-                <button id="relax" onclick="nao.explore(10)"> 
-                    <div>Explore</div>
-                </button>
-                <button id="lying" onclick="nao.stopExplore()">
-                    <div>Stop Explore</div>
-                </button>
-                <button id="wakeup" onclick="nao.motion.wakeUp();">
-                    <div>Wake Up</div>
-                </button>
-                <button id="rest" onclick="nao.motion.rest();">
-                    <div>Rest</div>
-                </button>
-                <button id="turnleft" onclick="nao.move('turnleft');">
-                <div>Turn Left</div>
-                </button>
-                <button id="forward" onclick="nao.move('forward',speed);">
-                    <div>Forward</div>
-                </button>
-                <button id="turnright" onclick="nao.move('turnright');">
-                    <div>Turn Right</div>
-                </button>
-                <button id="left" onclick="nao.move('left');">
-                    <div>Move Left</div>
-                </button>
-                <button id="backward" onclick="nao.move('backward');">
-                    <div>Backward</div>
-                </button>
-                <button id="right" onclick="nao.move('right');">
-                    <div>Move Right</div>
-                </button>
-                <button id="stop" onclick="nao.move('stop');">
-                    <div>Stop</div>
-                </button>
-                <button class="dark" id="reboot" onclick="nao.system.reboot();">
-                    <div\>Reboot</div>
-                </button>
-
-                <!--Gesture Buttons-->
-                <button id="sit" onclick="nao.spinHandsup('Im Aliiiveeee')">
-                    <div>Spin hands</div>
-                </button>
-                <button id="wave1" onclick="runBehaviour('dialog_move/animations/Others/Standing/Wave01');randomHello();">
-                    <div>WaveRight<div>
-                </button>
-                <button id="wave1" onclick="runBehaviour('dialog_move_hands/animations/Wave01');randomHello();">
-                    <div>WaveLeft</div>
-                </button>
-                <button id="handshake" onclick="runBehaviour('dialog_move_hands/animations/OpenBothHands');runBehaviour('dialog_move_arms/animations/UpBothArms')">
-                    <div>Handsup</div>
-                </button>           
-                <button id="handshake" onclick="runBehaviour('daps-bc/animations/success_rhandshake')">                
-                    <div>Handshake</div>
-                </button>
-                <button id="handshake" onclick="runBehaviour('daps-bc/animations/init_rhighfive')">
-                    <div>HighFive</div>
-                </button>                
-                <button id="standzero" onclick="runBehaviour('animations/Stand/Gestures/Salute_1')">           
-                    <div>Salute</div>
-                </button>
-                <button id="startrandom" onclick="startRandomBehaviour()">
-                    <div>Random</div>
-                </button>
-                <button id="stoprandom" onclick="stopRandomBehaviour()">
-                    <div>Stop Random</div>
-                </button>
-                <button id="openhand" onclick="nao.motion.openHand('LHand');">
-                    <div>Open Hand</div>
-                </button>
-                <button id="closehand" onclick="nao.motion.closeHand('LHand');">
-                    <div>Close Hand</div>
-                </button>
-
-                <!-- Return to home page -->
-                <button onclick="location.href='control-panel.html'">RETURN TO HOME PAGE</button>
+            <!-- Return to home page -->
+            <button class="RB" onclick="location.href='control-panel.html'">RETURN TO HOME PAGE</button>
             </section>
 
 
-           
-            <script src="scripts.js"></script>
-        </div>
-</body>
+            <section class="columns">
+                <div class="body-language-container">
+                    <p class="ACPTitle">Body Language</p>
+                    <!--Body Buttons-->
+                    <button class="light" id="crouch" onclick="nao.spin360();">
+                        <div>360<div>
+                    </button>
+                    <button class="light" id="stand " onclick="nao.spin180();">
+                        <div>180</div>
+                    </button>
+                    <button class="light" id="relax" onclick="nao.explore(10)">
+                        <div>Explore</div>
+                    </button>
+                    <button class="light" id="lying" onclick="nao.stopExplore()">
+                        <div>Stop Explore</div>
+                    </button>
+                    <button class="light" id="wakeup" onclick="nao.motion.wakeUp();">
+                        <div>Wake Up</div>
+                    </button>
+                    <button class="light" id="rest" onclick="nao.motion.rest();">
+                        <div>Rest</div>
+                    </button>
+                    <button class="light" id="turnleft" onclick="nao.move('turnleft');">
+                        <div>Turn Left</div>
+                    </button>
+                    <button class="light" id="forward" onclick="nao.move('forward',speed);">
+                        <div>Forward</div>
+                    </button>
+                    <button class="light" id="turnright" onclick="nao.move('turnright');">
+                        <div>Turn Right</div>
+                    </button>
+                    <button class="light" id="left" onclick="nao.move('left');">
+                        <div>Move Left</div>
+                    </button>
+                    <button class="light" id="backward" onclick="nao.move('backward');">
+                        <div>Backward</div>
+                    </button>
+                    <button class="light" id="right" onclick="nao.move('right');">
+                        <div>Move Right</div>
+                    </button>
+                    <button class="light" id="stop" onclick="nao.move('stop');">
+                        <div>Stop</div>
+                    </button>
+                    <button class="light" class="dark" id="reboot" onclick="nao.system.reboot();">
+                        <div\>Reboot
+                </div>
+                </button>
 
-<!--Footer-->
-<footer class="footer">
-    <div class="container">
-        <p>Pepper's Portal (Hypothetical) rights reserved</p>
+
+                <!--Gesture Buttons-->
+                <div class=gesture-container>
+                    <p class="ACPTitle">Gestures</p>
+                    <button class="light" id="sit" onclick="nao.spinHandsup('Im Aliiiveeee')">
+                        <div>Spin hands</div>
+                    </button>
+                    <button class="light" id="wave1"
+                        onclick="runBehaviour('dialog_move/animations/Others/Standing/Wave01');randomHello();">
+                        <div>WaveRight<div>
+                    </button>
+                    <button class="light" id="wave1"
+                        onclick="runBehaviour('dialog_move_hands/animations/Wave01');randomHello();">
+                        <div>WaveLeft</div>
+                    </button>
+                    <button class="light" id="handshake"
+                        onclick="runBehaviour('dialog_move_hands/animations/OpenBothHands');runBehaviour('dialog_move_arms/animations/UpBothArms')">
+                        <div>Handsup</div>
+                    </button>
+                    <button class="light" id="handshake" onclick="runBehaviour('daps-bc/animations/success_rhandshake')">
+                        <div>Handshake</div>
+                    </button>
+                    <button class="light" id="handshake" onclick="runBehaviour('daps-bc/animations/init_rhighfive')">
+                        <div>HighFive</div>
+                    </button>
+                    <button class="light" id="standzero" onclick="runBehaviour('animations/Stand/Gestures/Salute_1')">
+                        <div>Salute</div>
+                    </button>
+                    <button class="light" id="startrandom" onclick="startRandomBehaviour()">
+                        <div>Random</div>
+                    </button>
+                    <button class="light" id="stoprandom" onclick="stopRandomBehaviour()">
+                        <div>Stop Random</div>
+                    </button>
+                    <button class="light" id="openhand" onclick="nao.motion.openHand('LHand');">
+                        <div>Open Hand</div>
+                    </button>
+                    <button class="light" id="closehand" onclick="nao.motion.closeHand('LHand');">
+                        <div>Close Hand</div>
+                    </button>
+                </div>
+        </div>
     </div>
-</footer>
+</body>
 
 </html>
