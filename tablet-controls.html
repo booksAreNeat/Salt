@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pepper</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat Subrayada' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        .tablet-banner-title {
+            font-family: 'Montserrat Subrayada';
+        }
+
+        .tablet-navbar ul li a {
+            font-family: 'Montserrat Subrayada';
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src = "js/libs/qi/2/qi.js"></script>
+    <script src = "js/pepper-speachtotext.js"></script>
+    <script src = "js/jquery.min.js"></script>
+    <script src = "js/main.js"></script>
+    <script src = "js/naocontrol.js"></script>
+
+</head>
+
+<body>
+
+    <!--Banner section-->
+    <div class="tablet-banner">
+    
+
+        <!--Logo-->
+        <div class="tablet-banner-left">
+            <img src="Images/RGU Logo.png" class="tablet-logo"/>
+        </div>            
+
+
+        <!--banner title-->
+        <div class="tablet-banner-right">
+            <h1 class="tablet-banner-title">Pepper</h1>
+        </div>
+
+
+    </div>
+
+    <div class="tablet-navbar">
+
+
+        <!--Navigation links-->
+        <ul>
+
+            <li><a href="tablet-home.html">About Pepper</a></li>   
+            <li><a href="#">Controls</a></li>
+            <li><a href="tablet-socet.html">About SOCET</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="tablet-controls-container">
+
+       <div class="tablet-controls-row">
+            <div class = "tablet-controls-item">
+                <img src="Images/buttonimg/dancebutton.png" class="tablet-controls-images"/>
+                <button class = "tablet-controls-button" onclick = "runBehaviour('animations/Stand/Dance/DanceMoves');"></button>
+            </div>
+            <div class = "tablet-controls-item">
+              <img src="Images/buttonimg/wavebutton.png" class="tablet-controls-images"/>  
+              <button class = "tablet-controls-button" onclick = "runBehaviour('dialog_move/animations/Others/Standing/Wave01'); randomHello();"></button>
+            </div>
+            <div class = "tablet-controls-item">
+              <img src="Images/buttonimg/surprisemebutton.png" class="tablet-controls-images"/>  
+              <button class = "tablet-controls-button" onclick="startRandomBehaviour();"></button>
+            </div>
+            
+
+       </div>
+
+       <div class="tablet-controls-row">
+            <div class = "tablet-controls-item">
+               <img src="Images/buttonimg/salutebutton.png" class="tablet-controls-images"/> 
+               <button class = "tablet-controls-button" onclick="runBehaviour('animations/Stand/Gestures/Salute_1');"></button>
+            </div>
+            <div class = "tablet-controls-item">
+               <img src="Images/buttonimg/highfivebutton.png" class="tablet-controls-images"/> 
+               <button class = "tablet-controls-button" onclick="runBehaviour('animations/Stand/Gestures/Hey_1');"></button>
+            </div>
+            
+
+       </div>
+
+    </div>
+    <div class = "pepper-speech"></div>
+
+
+</body>
+
